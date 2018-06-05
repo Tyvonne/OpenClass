@@ -9,13 +9,13 @@
     </head>
 
     <body>
-        <h1>Les trucs a faire</h1>
+        <h1>Les trucs a faire de ouf</h1>
 
         <ul>
-        <% todolist.forEach(function(todo, index) { %>
-            <li><a href="/todo/supprimer/<%= index %>">✘</a> <%= todo %></li>
-        <% }); %>
-        </ul>
+            <% todolist.forEach(function(todo, index) { %>
+                <li> <a href="/todo/edit/<%= index %>">&#9998;</a> <%= todo %> <a href="/todo/supprimer/<%= index %>">✘</a></li>
+            <% }); %>
+            </ul>
 
         <form action="/todo/ajouter/" method="post">
             <p>
